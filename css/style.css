@@ -55,11 +55,13 @@ header{
     border: 0;
     padding: 10px 20px;        
     font-weight: bold;
-    font-size: 16px;
+    font-size: 12px;
     cursor: pointer;
     transition: 0.3s;
     background-color: #ba7af8;
     color: white;
+    text-transform: uppercase;
+
 }
 
 /*.tarefa-composer__button:hover{
@@ -77,17 +79,53 @@ header{
     align-items: center;
     display: flex;
     align-content: space-around;
-    border-bottom: gray 1px solid;
+    border-bottom: lightgray 1px solid;
 }
 
 .tarefa-texto{
     margin-left: 5px;
     width: 96%;
-    
+    font-weight: bold;
+    font-size: 14px;
+        
+}
+
+.tarefa-texto__checked{
+    margin-left: 5px;
+    width: 96%;
+    color: lightgray;
+    text-decoration: line-through;
+    font-weight: bold;
+    font-size: 14px;
+
+
 }
 
 .tarefa-lista__delete-button{
     color: black;
     background-color: white;
     border: white;
+}
+
+footer{
+    width: 300px;
+    display: flex;
+    align-content: space-around;
+    border: lightgray 1px solid;
+    height: 35px;
+    align-items: center;
+}
+
+
+.tarefa-lista__remove-button{
+    background-color: white;
+    border: white;
+    color: red;
+}
+
+.tarefa-lista__completed-button{
+    background-color: white;
+    border: white;
+    color: green;
+
 }

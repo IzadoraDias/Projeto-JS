@@ -5,6 +5,12 @@ const inputTexto = document.getElementById("tarefaComposerInput")
 //EVENTO DO BOTÃO
 button.addEventListener("click", function (event) {
     event.preventDefault();
+ 
+    if (inputTexto.value === undefined || inputTexto.value === null || inputTexto.value === "" || inputTexto.value === "                  "){
+       inputTexto.focus();
+       return false
+    }
+
     //cria a div    
     const div= document.createElement("div");
     div.className = "tarefas"
@@ -27,13 +33,27 @@ button.addEventListener("click", function (event) {
 
     //limpar o campo de texto
     inputTexto.value = null;
-v
+
     //ação do botão excluir
     const botaoExcluir = document.querySelector(".tarefa-lista__delete-button");
     botaoExcluir.addEventListener("click", function(event){
         event.preventDefault();
         div.remove();
     })
+
+text.addEventListener("click", function(event){
+    event.preventDefault();
+
+    if( text.classList.contains("tarefa-texto")){
+        text.classList.remove("tarefa-texto")
+        text.classList.add("tarefa-texto__checked")
+    }else{
+        text.classList.remove("tarefa-texto__checked")
+        text.classList.add("tarefa-texto")
+    }
+
+
+})
 
     
 })
