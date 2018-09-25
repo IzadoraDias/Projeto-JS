@@ -1,0 +1,93 @@
+/* GERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 10px;
+  
+    background-image: linear-gradient(to right, #e0c3fc, #8ec5fc)
+}
+
+.container{
+    width: 300px;
+    margin: 100px auto;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* FORM */
+header{
+    font-size: 0,5em;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: gray 1px solid;
+}
+
+.tarefa-composer__form-group{
+    position: relative;
+    width: 100%;
+}
+
+.tarefa-composer__label{
+    display: block;
+}
+
+.tarefa-composer__input{
+    align-items: center;
+    border: 1px solid #ffffff;
+    height: 80px;
+    padding: 38px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.tarefa-composer__button {   
+    width: 100%;
+    border: 0;
+    padding: 10px 20px;        
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #ba7af8;
+    color: white;
+}
+
+/*.tarefa-composer__button:hover{
+    background-color: #e6ecf0;
+    transition: 0.3s;
+}*/
+
+.tarefas-caixa{
+    height: 85%;
+}
+
+.tarefas{
+    background-color: #ffffff;    
+    padding: 10px 20px;
+    align-items: center;
+    display: flex;
+    align-content: space-around;
+    border-bottom: gray 1px solid;
+}
+
+.tarefa-texto{
+    margin-left: 5px;
+    width: 96%;
+    
+}
+
+.tarefa-lista__delete-button{
+    color: black;
+    background-color: white;
+    border: white;
+}
