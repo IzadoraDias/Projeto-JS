@@ -12,10 +12,11 @@ body {
 
 .container{
     width: 300px;
-    margin: 100px auto;
+    margin: 121px auto -88px;
     background-color: white;
     align-items: center;
     justify-content: center;
+    
 }
 
 h1{
@@ -44,10 +45,12 @@ header{
 .tarefa-composer__input{
     align-items: center;
     border: 1px solid #ffffff;
-    height: 80px;
+    height: 93px;
     padding: 38px;
     font-size: 14px;
     width: 100%;
+    margin-bottom: -10px;
+    
 }
 
 .tarefa-composer__button {   
@@ -70,7 +73,8 @@ header{
 }*/
 
 .tarefas-caixa{
-    height: 85%;
+    height: 55%;
+    word-wrap: break-word;
 }
 
 .tarefas{
@@ -93,7 +97,7 @@ header{
 .tarefa-texto__checked{
     margin-left: 5px;
     width: 96%;
-    color: lightgray;
+    color: gray;
     text-decoration: line-through;
     font-weight: bold;
     font-size: 14px;
@@ -110,10 +114,15 @@ header{
 footer{
     width: 300px;
     display: flex;
-    align-content: space-around;
-    border: lightgray 1px solid;
+    align-content: space-between;
+    border-top: lightgray 1px solid;
     height: 35px;
     align-items: center;
+    margin: 86px auto -77px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+
 }
 
 
@@ -121,6 +130,11 @@ footer{
     background-color: white;
     border: white;
     color: red;
+    display: flex;
+    flex: space-between;
+    background-color: #ba7af8;
+    height: 50px;
+    margin-left: 10px;
 }
 
 .tarefa-lista__completed-button{
@@ -129,3 +143,4 @@ footer{
     color: green;
 
 }
+
