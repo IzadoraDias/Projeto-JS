@@ -2,7 +2,7 @@ const button = document.querySelector(".tarefa-composer__button")
 const inputTexto = document.getElementById("tarefaComposerInput")
 
 
-//EVENTO DO BOTÃO
+//EVENTO DO BOTÃO ADD 
 button.addEventListener("click", function (event) {
     event.preventDefault();
  
@@ -41,7 +41,7 @@ button.addEventListener("click", function (event) {
         div.remove();
     })
 
-text.addEventListener("click", function(event){
+    text.addEventListener("click", function(event){
     event.preventDefault();
 
     if( text.classList.contains("tarefa-texto")){
@@ -51,10 +51,26 @@ text.addEventListener("click", function(event){
         text.classList.remove("tarefa-texto__checked")
         text.classList.add("tarefa-texto")
     }
-
-
 })
 
+    const botaoRemover = document.querySelector(".tarefa-lista__remove-button");
+      botaoRemover.addEventListener("click", function(event){
+        event.preventDefault();
+        tarefaLista.remove();
+})
+
+    const botaoConcluir = document.querySelector(".tarefa-lista__completed-button")
+      botaoConcluir.addEventListener("click", function(event){
+        event.preventDefault();        
+
+        if( text.classList.contains("tarefa-texto")){
+            text.classList.remove("tarefa-texto")
+            text.classList.add("tarefa-texto__checked")
+        }else{
+            text.classList.remove("tarefa-texto__checked")
+            text.classList.add("tarefa-texto")
+    }       
+})
     
 })
 
