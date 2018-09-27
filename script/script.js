@@ -1,8 +1,15 @@
 const button = document.querySelector(".tarefa-composer__button")
 const inputTexto = document.getElementById("tarefaComposerInput")
+const form = document.querySelector(".tarefa-composer__form")
 
 
 //EVENTO DO BOTÃO ADD 
+
+//
+form.addEventListener("submit", function(event){
+    event.preventDefault();
+})
+
 button.addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -21,7 +28,6 @@ button.addEventListener("click", function (event) {
     div.className = "tarefas"
     //cria um p e insete o valor do input
     const text = document.createElement("p")
-    console.log("text")
     text.className = "tarefa-texto"
     text.innerHTML = inputTexto.value;
     //cria o botão de excluir
@@ -55,6 +61,7 @@ button.addEventListener("click", function (event) {
 
     const tarefas = document.querySelector(".tarefas")
     const botaoRemover = document.querySelector(".tarefa-lista__remove-button");
+      
 
     botaoRemover.addEventListener("click", function (event) {
         event.preventDefault();
