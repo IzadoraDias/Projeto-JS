@@ -46,7 +46,7 @@ header{
     align-items: center;
     border: 1px solid #ffffff;
     height: 93px;
-    padding: 38px;
+    padding: 27px;
     font-size: 14px;
     width: 100%;
     margin-bottom: -10px;
@@ -64,17 +64,18 @@ header{
     background-color: #ba7af8;
     color: white;
     text-transform: uppercase;
-
 }
 
-/*.tarefa-composer__button:hover{
-    background-color: #e6ecf0;
+.tarefa-composer__button:hover{
+    background-color: #bda4d6;
     transition: 0.3s;
-}*/
+}
 
 .tarefas-caixa{
     height: 55%;
     word-wrap: break-word;
+    max-height: 300px;
+    overflow-y: scroll;
 }
 
 .tarefas{
@@ -94,15 +95,10 @@ header{
         
 }
 
-.tarefa-texto__checked{
-    margin-left: 5px;
-    width: 96%;
+.tarefa-texto.checked{
     color: gray;
     text-decoration: line-through;
-    font-weight: bold;
-    font-size: 14px;
-
-
+   
 }
 
 .tarefa-lista__delete-button{
@@ -122,25 +118,42 @@ footer{
     background-color: white;
     align-items: center;
     justify-content: center;
-
 }
 
 
 .tarefa-lista__remove-button{
-    background-color: white;
-    border: white;
-    color: red;
-    display: flex;
+    border: red;
+    color: white;
     flex: space-between;
-    background-color: #ba7af8;
-    height: 50px;
-    margin-left: 10px;
+    background-color: #c74646;
+    height: 34px;
+    margin-left: 0px;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
 }
 
-.tarefa-lista__completed-button{
-    background-color: white;
-    border: white;
-    color: green;
+.tarefa-lista__remove-button:hover{
+    background-color: #f06d6d;
+    transition: 0.3s;
+    color:#b81f1f;
+}
 
+.tarefa-lista__completed-button{    
+    border: green;
+    color: white;
+    flex: space-between;
+    background-color: #277249;
+    height: 34px;
+    margin-left: 0px;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tarefa-lista__completed-button:hover{
+    background-color: #45ca81;
+    transition: 0.3s;
+    color: #277249; 
 }
 

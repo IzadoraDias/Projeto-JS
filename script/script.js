@@ -6,20 +6,15 @@ const inputTexto = document.getElementById("tarefaComposerInput")
 button.addEventListener("click", function (event) {
     event.preventDefault();
 
-
     if (inputTexto.value === undefined || inputTexto.value === null || inputTexto.value === "" || inputTexto.value === " ") {
         inputTexto.focus();
         return false
     }
-
     const re = /\w+/ig
-
     if (!re.test(inputTexto.value)) {
         inputTexto.focus();
         return false
     }
-
-
 
     //cria a div    
     const div = document.createElement("div");
@@ -47,71 +42,37 @@ button.addEventListener("click", function (event) {
 
     //ação do botão excluir
     const botaoExcluir = document.querySelector(".tarefa-lista__delete-button");
+
     botaoExcluir.addEventListener("click", function (event) {
         event.preventDefault();
         div.remove();
-
     })
-
 
     text.addEventListener("click", function (event) {
         event.preventDefault();
+        text.classList.toggle("checked")
+        })
 
-        if (text.classList.contains("tarefa-texto")) {
-            text.classList.remove("tarefa-texto")
-            text.classList.add("tarefa-texto__checked")
-        } else {
-            text.classList.remove("tarefa-texto__checked")
-            text.classList.add("tarefa-texto")
-        }
-    })
     const tarefas = document.querySelector(".tarefas")
     const botaoRemover = document.querySelector(".tarefa-lista__remove-button");
+
     botaoRemover.addEventListener("click", function (event) {
         event.preventDefault();
         tarefas.remove();
-
     })
 })
 
-   const div = document.querySelector("div");    
-    
-    
-    
-    const buttonDelete = document.querySelector("button")
-  
+    const botaoConcluir = document.querySelector(".tarefa-lista__completed-button");
 
-const botaoConcluir = document.querySelector(".tarefa-lista__completed-button")
-
-console.log(botaoConcluir);
-
- botaoConcluir.addEventListener("click", function (event) {
+    botaoConcluir.addEventListener("click", function (event) {
     event.preventDefault();
-    
-    const text = document.querySelector(".tarefas")
-    let contador = 0;
-
-    for(let i = 0; i < text.length; i++) {
-        if (contador % 2 === 0) {
-            text[i].classList.remove("tarefa-texto")
-            text[i].classList.add("tarefa-texto__checked")
-        } else {
-            text[i].classList.remove("tarefa-texto__checked")
-            text[i].classList.add("tarefa-texto")
-
-        } contador++
-    }
-
-    // if (text.classList.contains("tarefa-texto")){
-    //     text.classList.remove("tarefa-texto")
-    //     text.classList.add("tarefa-texto__checked")
-    // }else{
-    //     text.classList.remove("tarefa-texto__checked")
-    //     text.classList.add("tarefa-texto")
-})
-
-
-
+    const allItens = document.querySelectorAll("p")
+    for( i of allItens)
+        if(i.classList.contains("checked")){ 
+        }else{
+            i.classList.toggle("checked")
+        }        
+    })
 
 
 
