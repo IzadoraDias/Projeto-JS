@@ -1,3 +1,4 @@
+//chama o botão e o input
 const button = document.querySelector(".tarefa-composer__button")
 const inputTexto = document.getElementById("tarefaComposerInput")
 const form = document.querySelector(".tarefa-composer__form")
@@ -5,7 +6,6 @@ const form = document.querySelector(".tarefa-composer__form")
 
 //EVENTO DO BOTÃO ADD 
 
-//
 form.addEventListener("submit", function(event){
     event.preventDefault();
 })
@@ -54,21 +54,23 @@ button.addEventListener("click", function (event) {
         div.remove();
     })
 
+    //ação do check e uncheck
     text.addEventListener("click", function (event) {
         event.preventDefault();
         text.classList.toggle("checked")
         })
 
+    //ação do botão remover todos
     const tarefas = document.querySelector(".tarefas")
     const botaoRemover = document.querySelector(".tarefa-lista__remove-button");
       
-
     botaoRemover.addEventListener("click", function (event) {
         event.preventDefault();
         tarefas.remove();
     })
 })
 
+    //botão concluir todos
     const botaoConcluir = document.querySelector(".tarefa-lista__completed-button");
 
     botaoConcluir.addEventListener("click", function (event) {
@@ -79,7 +81,7 @@ button.addEventListener("click", function (event) {
         }else{
             i.classList.toggle("checked")
         }        
-    })
+})
 
 
 
